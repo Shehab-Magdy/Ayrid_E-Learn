@@ -1,0 +1,12 @@
+{% extends "layouts/base.html" %}
+{% load static %} 
+{% block title %}
+    Home page
+{% endblock title %}
+{% block Body %}
+<h1>Home Page</h1>
+<div class="container">
+    <a href="{% url 'eLearn:elearn.newRegistration' %}">Register</a>
+    <a href="{% url 'eLearn:elearn.login' %}">Login</a>
+</div>
+{% endblock Body %}
