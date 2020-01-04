@@ -10,10 +10,10 @@ def editMembers(request):
         newMember = Members()
         newMember.FullName = request.POST.get('FullName')
         newMember.description = request.POST.get('description')
-        # status = request.POST.get('active')
         newMember.status = True if request.POST.get('active') else False
         newMember.pic = request.FILES['memberImg']
         newMember.save()
+        return render(request, 'admin/adminhome.html')
     elif request.method == 'GET':
         pass
     if Members.objects.all():
