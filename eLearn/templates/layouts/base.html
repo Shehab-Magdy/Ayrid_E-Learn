@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-      {% block title %}
-      Document
-      {% endblock title %}</title>
-     {% comment %} Icon for title bar {% endcomment %}
+      {% block title %} Document {% endblock title %}
+    </title>
+    {% comment %} Icon for title bar {% endcomment %}
     <link rel="icon" href="{% static 'elearn/dist/img/elearn_ico.ico' %}" />
 
     {% comment %} Styles {% endcomment %}
@@ -24,13 +23,11 @@
       href=" {% static 'elearn/dist/css/customStyle.css' %}"
     />
     <link
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       rel="stylesheet"
-      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-      crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
-    {% comment %} Jquery scripts {% endcomment %} 
+    {% comment %} Jquery scripts {% endcomment %}
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -48,46 +45,192 @@
     ></script>
   </head>
   <body>
-    {% block Header %} {% endblock Header %} 
-    {% block NavBar %}<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    {% block Header %} {% endblock Header %} {% block NavBar %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="{% url 'eLearn:elearn.home' %}">AYRID</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
-    
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="{% url 'eLearn:elearn.home' %}">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="{% url 'eLearn:elearn.home' %}"
+              >Home <span class="sr-only">(current)</span></a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'eLearn:elearn.newRegistration' %}">Register</a>
+            <a class="nav-link" href="{% url 'eLearn:elearn.newRegistration' %}"
+              >Register</a
+            >
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'eLearn:elearn.login' %}">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'eLearn:elearn.contactUs' %}">Contact Us</a>
+            <a class="nav-link" href="{% url 'eLearn:elearn.contactUs' %}"
+              >Contact Us</a
+            >
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="{% url 'eLearn:elearn.admin' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a
+              class="nav-link dropdown-toggle"
+              href="{% url 'eLearn:elearn.admin' %}"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
               Administrator
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="{% url 'eLearn:elearn.saverotator' %}">Rotator</a>
-              <a class="dropdown-item" href="{% url 'eLearn:elearn.members' %}">Members</a>
+              <a
+                class="dropdown-item"
+                href="{% url 'eLearn:elearn.saverotator' %}"
+                >Rotator</a
+              >
+              <a class="dropdown-item" href="{% url 'eLearn:elearn.members' %}"
+                >Members</a
+              >
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="{% url 'eLearn:elearn.ourTeam' %}">Team Members</a>
+              <a class="dropdown-item" href="{% url 'eLearn:elearn.ourTeam' %}"
+                >Team Members</a
+              >
             </div>
           </li>
         </ul>
       </div>
-    </nav> {% endblock NavBar %} 
-    {% block SideMenu %} {% endblock SideMenu %} 
-    {% block Body %} {% endblock Body %} 
-    {% block Footer %} {% endblock Footer %}
+    </nav>
+    {% endblock NavBar %} {% block SideMenu %} {% endblock SideMenu %} {% block Body %}  {% endblock Body %} {% block Footer %}
+    <!-- Footer -->
+    <footer class="page-footer font-small mdb-color lighten-3 pt-4">
+      <!-- Footer Links -->
+      <div class="container text-center text-md-left">
+        <!-- Grid row -->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
+            <!-- Content -->
+            <h5 class="font-weight-bold text-uppercase mb-4">Footer Content</h5>
+            <p>
+              Here you can use rows and columns to organize your footer content.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
+              amet numquam iure provident voluptate esse quasi, veritatis totam
+              voluptas nostrum.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="clearfix w-100 d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
+            <!-- Links -->
+            <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <p>
+                  <a href="#!">PROJECTS</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#!">ABOUT US</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#!">BLOG</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#!">AWARDS</a>
+                </p>
+              </li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="clearfix w-100 d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+            <!-- Contact details https://www.w3schools.com/icons/fontawesome_icons_webapp.asp -->
+            <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <p>
+                  <i class="fa fa-address-card-o"></i> New York, NY 10012, US
+                </p>
+              </li>
+              <li>
+                <p><i class="fa fa-at"></i> info@example.com</p>
+              </li>
+              <li>
+                <p><i class="fa fa-phone"></i> + 01 234 567 88</p>
+              </li>
+              <li>
+                <p><i class="fa fa-mobile"></i> + 01 234 567 89</p>
+              </li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+          <hr class="clearfix w-100 d-md-none" />
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
+            <!-- Social buttons https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_social_media_buttons-->
+            <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
+            <!-- Facebook -->
+            <a href="#" class="fa fa-facebook"></a>
+            <!-- Twitter -->
+            <a href="#" class="fa fa-twitter"></a>
+            <!-- Google -->
+            <a href="#" class="fa fa-google"></a>
+            <!-- Dribbble -->
+            <a href="#" class="fa fa-dribbble"></a>
+            <!-- LinkedIn -->
+            <a href="#" class="fa fa-linkedin"></a>
+            <!-- Youtube -->
+            <a href="#" class="fa fa-youtube"></a>
+            <!-- Instagram -->
+            <a href="#" class="fa fa-instagram"></a>
+            <!-- Pinterest -->
+            <a href="#" class="fa fa-pinterest"></a>
+          </div>
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
+          {% block subscribe %}{% endblock subscribe %}
+          </div>
+
+        </div>
+        <!-- Grid row -->
+      </div>
+      <!-- Footer Links -->
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">
+        © 2020 Copyright:
+        <a href="#">ALV watt Team</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    {% endblock Footer %}
     <script src="{% static 'elearn/dist/js/customJS.js' %}"></script>
     {% block Script %} {% endblock Script %}
-
   </body>
 </html>

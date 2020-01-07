@@ -75,9 +75,10 @@
     </a>
   </div>
 </div>
-<footer>
+{% endblock Body %}
+{% block subscribe %}
 <div class="container">
-  <h5>Subscribe with our news letter</h5>
+  <h6>Subscribe with our news letter</h6>
   <form
     method="Post"
     action="{% url 'eLearn:elearn.subscribers' %}"
@@ -87,5 +88,5 @@
     <input type="submit" value="Subscribe" />
   </form>
 </div>
-</footer>
-{% endblock Body %}
+{% endblock subscribe %}
+
